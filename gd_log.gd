@@ -1,3 +1,4 @@
+@icon("./gd_log.png")
 extends RefCounted
 
 
