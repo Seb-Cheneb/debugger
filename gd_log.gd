@@ -1,5 +1,5 @@
 @icon("./gd_log.png")
-extends RefCounted
+extends Node
 
 
 func get_class_name(object: Object) -> String:
@@ -35,6 +35,6 @@ func error(object: Object, message: String, is_debugging: bool = true) -> void:
 	print_message(object, message, is_debugging, "red")
 
 
-func check_reference(object: Object, referenced_object: Object) -> void:
+func check_reference(object: Object, referenced_object: Object, referenced_object_name: String) -> void:
 	if not referenced_object:
-		print_message(object, referenced_object.name + " not set", true, "red")
+		print_message(object, referenced_object_name + " not set", true, "red")
